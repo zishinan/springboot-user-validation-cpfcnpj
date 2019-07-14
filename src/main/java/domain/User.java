@@ -26,8 +26,12 @@ public class User implements Serializable {
     @Email(message = "Email inválido")
     private String email;
 
-    private String cpf;
-    private String cnpj;
+    @NotEmpty(message="Preenchimento obrigatório")
+    private String cpfOuCnpj;
+
+    private Integer tipo;
+
+    public User() {}
 
     public String getNome() {
         return nome;
@@ -45,19 +49,19 @@ public class User implements Serializable {
         this.email = email;
     }
 
-    public String getCpf() {
-        return cpf;
+    public String getCpfOuCnpj() {
+        return cpfOuCnpj;
     }
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
+    public void setCpfOuCnpj(String cpfOuCnpj) {
+        this.cpfOuCnpj = cpfOuCnpj;
     }
 
-    public String getCnpj() {
-        return cnpj;
+    public Integer getTipo() {
+        return tipo;
     }
 
-    public void setCnpj(String cnpj) {
-        this.cnpj = cnpj;
+    public void setTipo(Integer tipo) {
+        this.tipo = tipo;
     }
 }
