@@ -1,8 +1,11 @@
 package dto;
 
+import service.validation.UserInsert;
+
 import javax.validation.constraints.NotEmpty;
 import java.io.Serializable;
 
+@UserInsert
 public class UserDto implements Serializable {
     private static final long serialVersionUID = 1L;
 
