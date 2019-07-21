@@ -1,6 +1,6 @@
 package dto;
 
-import service.validation.UserInsert;
+import services.UserInsert;
 
 import javax.validation.constraints.NotEmpty;
 import java.io.Serializable;
