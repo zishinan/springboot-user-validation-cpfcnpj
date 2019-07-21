@@ -31,7 +31,15 @@ public class User implements Serializable {
 
     private Integer tipo;
 
-    public User() {}
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public User(Integer id, String cpfOuCnpj, Integer tipo) {}
 
     public String getNome() {
         return nome;
